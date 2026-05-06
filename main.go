@@ -70,9 +70,139 @@ func main() {
 	animation.TypeWriter(style.Green("\nNAME HAS BEEN SAVED SUCCESSFULLY 🗹"))
 
 	fmt.Println(style.Green("___________________________________________________________________________"))
+	fmt.Println()
+	animation.TypeWriter(style.Yellow(style.Bold("> DO YOU WANT TO READ INSTRUCTIONS BEFORE DIVING INTO THE PROGRAM ? (YES/NO)")))
+
+	var ReadME string
+	var option string
+
+	for {
+
+		fmt.Println()
+		fmt.Print(style.Blue(style.Bold("OPTION : ")))
+		input, _ := reader.ReadString('\n')
+		input = strings.TrimSpace(input)
+
+		if input == "" {
+			fmt.Println(style.Red(style.Upperline(style.Underline("ERROR ⚠︎: option can't be empty"))))
+			continue
+		}
+
+		ReadME = Case(input)
+
+		switch ReadME {
+		case "No":
+			goto start
+		case "Yes":
+			goto start1
+		default:
+			fmt.Println(style.Red(style.Upperline(style.Underline("ERROR ⚠︎: option not found"))))
+			continue
+		}
+
+	}
+
+start1:
+	time.Sleep(700 * time.Millisecond)
+	fmt.Print("\033[3J\033[H\033[2J")
+	fmt.Println()
+	fmt.Println(style.BlueBackground(style.Bold("\t          ● ASCII-ART CLI PROGRAM ●           ")))
+	fmt.Println("\t\t\t( ｡" + style.Yellow("◕") + "‿‿" + style.Yellow("◕") + "｡)")
 
 	fmt.Println()
+	animation.Loading("● INSTRUCTIONS & README")
+	fmt.Println(style.Yellow("___________________________________________________________________________\n"))
+	animation.TypeWriterSlow(style.Yellow(style.Dim("This an Ascii-art CLI program to print out text into a beautiful Ascii-Art font.")))
+	animation.TypeWriterSlow(style.Yellow(style.Dim("it has three Ascii-art font style with are ; ")))
+	animation.TypeWriterSlow(style.White("1. standard font"))
+	animation.TypeWriterSlow(style.White("2. shadow font"))
+	animation.TypeWriterSlow(style.White("3. thinkertoy font\n"))
+	time.Sleep(600 * time.Millisecond)
+	animation.TypeWriterSlow(style.Yellow(style.Dim(style.Bold("\t ✳ FONT SAMPLES ✳ "))))
+	fmt.Println()
+	time.Sleep(300 * time.Millisecond)
+	animation.TypeWriterSlow(style.GreyBackground(style.Dim("⦁ standard font :")))
+	time.Sleep(500 * time.Millisecond)
+
+	fmt.Println(style.White(`
+      _           _                     _____                  
+     | |         | |                   |  __ \                 
+     | |   ___   | |__    _ __         | |  | |   ___     ___  
+ _   | |  / _ \  |  _ \  | '_ \        | |  | |  / _ \   / _ \ 
+| |__| | | (_) | | | | | | | | |       | |__| | | (_) | |  __/ 
+ \____/   \___/  |_| |_| |_| |_|       |_____/   \___/   \___| 
+                                                                                              
+`))
 	fmt.Println(style.Grey("___________________________________________________________________________"))
+
+	time.Sleep(600 * time.Millisecond)
+
+	animation.TypeWriterSlow(style.GreyBackground(style.Dim("⦁ shadow font :")))
+	time.Sleep(500 * time.Millisecond)
+
+	fmt.Println(style.White(`
+                                                                     
+      _|          _|                      _|_|_|                     
+      _|   _|_|   _|_|_|   _|_|_|         _|    _|   _|_|     _|_|   
+      _| _|    _| _|    _| _|    _|       _|    _| _|    _| _|_|_|_| 
+_|    _| _|    _| _|    _| _|    _|       _|    _| _|    _| _|       
+  _|_|     _|_|   _|    _| _|    _|       _|_|_|     _|_|     _|_|_| 
+                                                                                          
+`))
+
+	fmt.Println(style.Grey("___________________________________________________________________________"))
+
+	time.Sleep(600 * time.Millisecond)
+	animation.TypeWriterSlow(style.GreyBackground(style.Dim("⦁ thinkertoy font :")))
+	time.Sleep(500 * time.Millisecond)
+
+	fmt.Println(style.White(`                                   
+    o     o               o-o           
+    |     |               |  \          
+    | o-o O--o o-o        |   O o-o o-o 
+\   o | | |  | |  |       |  /  | | |-' 
+ o-o  o-o o  o o  o       o-o   o-o o-o                     
+`))
+	fmt.Println(style.Grey("___________________________________________________________________________"))
+
+	time.Sleep(300 * time.Millisecond)
+
+	animation.Rainbow("\t✳ ASCII-ART CUSTOMIZATION ✳")
+	fmt.Println()
+	fmt.Println("\033[0m")
+	animation.TypeWriterSlow(style.Yellow(style.Dim("this Program allows the user to customize the text ASCII-art output to different format ")))
+	animation.TypeWriterSlow(style.Yellow(style.Dim("it supports colour customization.. Avaliable colours are;")))
+	animation.TypeWriterSlow(style.White("‣ RED"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ YELLOW"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ GREEN"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ BLUE"))
+	time.Sleep(400 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ CYAN"))
+	time.Sleep(400 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ MAGENTA"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ PURPLE"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ DARK RED"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ DARK YELLOW"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ WHITE"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ GREY"))
+	fmt.Println()
+	animation.TypeWriterSlow(style.Yellow(style.Dim("⦁ it also supports text format Styles customization.. Avaliable Styles are;")))
+	animation.TypeWriterSlow(style.White("‣ BOLD"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ DIM"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ ITALIC"))
+	time.Sleep(200 * time.Millisecond)
+	animation.TypeWriterSlow(style.White("‣ STRIPES"))
+	time.Sleep(1600 * time.Millisecond)
 
 	fmt.Println(style.GreyBackground(" ENTER YOUR OPTION TO CONTINUE "))
 	fmt.Println()
@@ -81,16 +211,10 @@ func main() {
 	fmt.Println()
 	fmt.Println("\033[1m\033[42m"+" ENTER KEY "+"\033[0m"+"\033[0m", "|====|", "\033[1m\033[41m"+" END "+"\033[0m")
 
-	var option string
-
 	for {
 		fmt.Println()
 		fmt.Print(style.Blue("\nOPTION : "))
-		input, err := reader.ReadString('\n')
-		if err != nil {
-    	fmt.Println("Input error:", err)
-    	continue
-		}
+		input, _ := reader.ReadString('\n')
 		input = strings.TrimSpace(input)
 
 		option = Case(input)
@@ -113,6 +237,8 @@ func main() {
 
 	}
 
+start:
+
 	fmt.Println(style.Green("___________________________________________________________________________"))
 
 	animation.TypeWriterSlow(style.Green(style.Italic("\n▶ NOW LET'S DIVE INTO THE PROGRAM FULLY : " + fullname)))
@@ -122,9 +248,11 @@ func main() {
 	fmt.Println()
 	animation.ProgressBarGreen(40)
 	time.Sleep(100 * time.Millisecond)
+
 	fmt.Print("\033[3J\033[H\033[2J")
 
 	fmt.Println()
+end:
 	fmt.Println(style.BlueBackground(style.Bold("\t          ● ASCII-ART CLI PROGRAM ●           ")))
 	(animation.Blink("      \t\t\t "))
 	fmt.Println()
@@ -135,6 +263,8 @@ func main() {
 	animation.TypeWriter(style.Green(style.Italic("\n▶ Enter your input text...")))
 
 	fmt.Println(style.Green("___________________________________________________________________________"))
+
+input:
 
 	var inputText string
 
@@ -172,7 +302,7 @@ func main() {
 		break
 
 	}
-
+font:
 	var font string
 
 	for {
@@ -187,7 +317,12 @@ func main() {
 			continue
 
 		}
+
 		font = Case(input)
+
+		if font == "Back" {
+			goto input
+		}
 
 		switch font {
 		case "Standard":
@@ -195,12 +330,15 @@ func main() {
 		case "Thinkertoy":
 		default:
 			fmt.Println(style.Red(style.Upperline(style.Underline("ERROR ⚠︎: font style not found"))))
-			fmt.Println(style.Yellow(style.Upperline(style.Underline("SUPPORTED 🖒 : Standard, Shadow, Thinkertoy"))))
+			fmt.Println(style.Yellow(style.Upperline(style.Underline("SUPPORTED 🖒 : Standard, Shadow, Thinkertoy, Back(previous input)"))))
 			continue
 		}
 
 		break
 	}
+
+colour:
+
 	var colour string
 
 	for {
@@ -217,6 +355,10 @@ func main() {
 		}
 
 		colour = Case(input)
+
+		if colour == "Back" {
+			goto font
+		}
 
 		switch colour {
 
@@ -246,7 +388,7 @@ func main() {
 			colour = ""
 		default:
 			fmt.Println(style.Red(style.Upperline(style.Underline("ERROR ⚠︎: Colour style not found"))))
-			fmt.Println(style.Yellow(style.Upperline(style.Underline("SUPPORTED 🖒 : Red, Green, Blue, Yellow, Magenta, Cyan, Purple, Dark Red, Dark Yellow, White, Grey"))))
+			fmt.Println(style.Yellow(style.Upperline(style.Underline("SUPPORTED 🖒 : Red, Green, Blue, Yellow, Magenta, Cyan, Purple, Dark Red, Dark Yellow, White, Grey, None, Back(previous input)"))))
 			continue
 
 		}
@@ -270,6 +412,10 @@ func main() {
 		}
 
 		Style = Case(input)
+
+		if Style == "Back" {
+			goto colour
+		}
 
 		switch Style {
 		case "Bold":
@@ -306,7 +452,16 @@ func main() {
 		}
 
 		Output := ascii.GenerateArt(input, banner)
+		fmt.Println()
+		animation.LoadingBlue("Processing")
+		fmt.Print("\033[3J\033[H\033[2J")
+		fmt.Println(style.BlueBackground(style.Bold("\t          ● ASCII-ART CLI PROGRAM ●           ")))
+		fmt.Println("\t\t\t( ｡" + style.Yellow("◕") + "‿‿" + style.Yellow("◕") + "｡)")
+
+		fmt.Println()
+		fmt.Println(style.Grey("______________________________________________________________________________"))
 		fmt.Print(colour + Style + Output + "\033[0m")
+		fmt.Println(style.Grey("______________________________________________________________________________"))
 	}
 
 	if font == "Shadow" {
@@ -319,7 +474,16 @@ func main() {
 		}
 
 		Output := ascii.GenerateArt(input, banner)
+		fmt.Println()
+		animation.LoadingBlue("Processing")
+		fmt.Print("\033[3J\033[H\033[2J")
+		fmt.Println(style.BlueBackground(style.Bold("\t          ● ASCII-ART CLI PROGRAM ●           ")))
+		fmt.Println("\t\t\t( ｡" + style.Yellow("◕") + "‿‿" + style.Yellow("◕") + "｡)")
+
+		fmt.Println()
+		fmt.Println(style.Grey("_____________________________________________________________________________________"))
 		fmt.Print(colour + Style + Output + "\033[0m")
+		fmt.Println(style.Grey("_____________________________________________________________________________________"))
 	}
 
 	if font == "Thinkertoy" {
@@ -332,9 +496,64 @@ func main() {
 		}
 
 		Output := ascii.GenerateArt(input, banner)
+		fmt.Println()
+		animation.LoadingBlue("Processing")
+		fmt.Print("\033[3J\033[H\033[2J")
+		fmt.Println(style.BlueBackground(style.Bold("\t          ● ASCII-ART CLI PROGRAM ●           ")))
+		fmt.Println("\t\t\t( ｡" + style.Yellow("◕") + "‿‿" + style.Yellow("◕") + "｡)")
 
+		fmt.Println()
+		fmt.Println(style.Grey("___________________________________________________________________________________"))
 		fmt.Print(colour + Style + Output + "\033[0m")
+		fmt.Println(style.Grey("___________________________________________________________________________________"))
 
 	}
 
+	fmt.Println()
+	animation.TypeWriter(style.Yellow(style.Bold("> DO YOU WANT TO CONTINUE ? (YES/NO)")))
+
+	var Continue string
+
+	for {
+		fmt.Println()
+		fmt.Print(style.Blue(style.Bold("OPTION : ")))
+		input, _ := reader.ReadString('\n')
+		input = strings.TrimSpace(input)
+
+		if input == "" {
+			fmt.Println(style.Red(style.Upperline(style.Underline("ERROR ⚠︎: option can't be empty"))))
+			continue
+		}
+
+		Continue = Case(input)
+
+		switch Continue {
+		case "No":
+			fmt.Println()
+			fmt.Println(style.Green("__________________________________________________________________________________________________________________________________________"))
+
+			animation.TypeWriter(style.Green(style.Italic("▶ " + fullname + " Thanks for testing this CLI Program, Please do well to follow us on @github.com/Stanley-0ps")))
+			fmt.Println(style.White(`                                   
+████████╗██╗  ██╗ █████╗ ███╗   ██╗██╗  ██╗    ██╗   ██╗ ██████╗ ██╗   ██╗
+╚══██╔══╝██║  ██║██╔══██╗████╗  ██║██║ ██╔╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║
+   ██║   ███████║███████║██╔██╗ ██║█████╔╝      ╚████╔╝ ██║   ██║██║   ██║
+   ██║   ██╔══██║██╔══██║██║╚██╗██║██╔═██╗       ╚██╔╝  ██║   ██║██║   ██║
+   ██║   ██║  ██║██║  ██║██║ ╚████║██║  ██╗       ██║   ╚██████╔╝╚██████╔╝
+   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝       ╚═╝    ╚═════╝  ╚═════╝                   
+`))
+			fmt.Println(style.Green("___________________________________________________________________________________________________________________________________________"))
+			fmt.Println()
+			animation.BlinkPro("      \t\t\t ")
+			fmt.Println()
+			return
+
+		case "Yes":
+			fmt.Print("\033[3J\033[H\033[2J")
+			goto end
+		default:
+			fmt.Println(style.Red(style.Upperline(style.Underline("ERROR ⚠︎: option not found"))))
+			continue
+		}
+
+	}
 }
