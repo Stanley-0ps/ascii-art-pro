@@ -1,29 +1,29 @@
 # 🎨 ASCII Art CLI Program
-
-A powerful and interactive **command-line ASCII Art generator** built with Go.
-This project allows users to transform input text into stylized ASCII art using different banner fonts, colors, and styles — enhanced with smooth terminal animations for a modern CLI experience.
+A powerful and interactive command-line ASCII Art generator built with **Go**.
+Transform text into beautifully styled ASCII art with multiple fonts, colors, and smooth terminal animations.
 
 ---
 
 ## ✨ Features
 
-* 🖋️ ASCII art generation from text input
-* 🎭 Multiple banner fonts:
+* 🖋️ Generate ASCII art from text input
+* 🎭 Multiple fonts:
 
   * Standard
   * Shadow
   * Thinkertoy
-* 🌈 Text styling with colors and ANSI effects
-* 🎬 Smooth terminal animations:
+* 🌈 ANSI color customization
+* ✨ Text styling (Bold, Dim, Italic, Stripes)
+* 🎬 Terminal animations:
 
-  * Loading animations
-  * Progress bars
-  * Typing effects
-  * Blink effects
-  * Rainbow text animation
-* 🔒 Input validation for safe and clean user input
-* 👤 User-friendly CLI onboarding flow (name, options, configuration)
-* ⚡ Fast and lightweight Go implementation
+  * Loading animation
+  * Progress bar
+  * Typing effect
+  * Blink effect
+  * Rainbow animation
+* 🔒 Input validation
+* 👤 Interactive CLI onboarding
+* ⚡ Fast and lightweight
 
 ---
 
@@ -32,46 +32,83 @@ This project allows users to transform input text into stylized ASCII art using 
 ```
 Ascii-art-PRO/
 │
-├── animation/   # Terminal animations (loading, progress bar, effects)
-├── ascii/       # ASCII art generation logic and banner parsing
-├── style/       # ANSI color and text styling utilities
-├── main.go      # CLI entry point and user interaction flow
+├── animation/   # Terminal animations
+├── ascii/       # ASCII rendering logic
+├── style/       # ANSI styling utilities
+├── main.go      # Entry point
 ```
 
 ---
 
-## 🚀 How It Works
+## ✳ Font Samples
 
-1. The user enters their name and configuration settings.
-2. The program validates input and loads the selected font banner.
-3. The input text is converted into ASCII art.
-4. Output is styled with selected colors and text effects.
-5. Animated CLI feedback enhances user experience throughout the process.
+### Standard
+
+```
+      _           _                     _____                  
+     | |         | |                   |  __ \                 
+     | |   ___   | |__    _ __         | |  | |   ___     ___  
+ _   | |  / _ \  |  _ \  | '_ \        | |  | |  / _ \   / _ \ 
+| |__| | | (_) | | | | | | | | |       | |__| | | (_) | |  __/ 
+ \____/   \___/  |_| |_| |_| |_|       |_____/   \___/   \___| 
+```
+
+### Shadow
+
+```
+      _|          _|                      _|_|_|                     
+      _|   _|_|   _|_|_|   _|_|_|         _|    _|   _|_|     _|_|   
+      _| _|    _| _|    _| _|    _|       _|    _| _|    _| _|_|_|_| 
+_|    _| _|    _| _|    _| _|    _|       _|    _| _|    _| _|       
+  _|_|     _|_|   _|    _| _|    _|       _|_|_|     _|_|     _|_|_| 
+```
+
+### Thinkertoy
+
+```
+    o     o               o-o           
+    |     |               |  \          
+    | o-o O--o o-o        |   O o-o o-o 
+\   o | | |  | |  |       |  /  | | |-' 
+ o-o  o-o o  o o  o       o-o   o-o o-o 
+```
 
 ---
 
-## ▶️ Usage
+## 🎨 Customization
 
-### Run the program:
+### Colors
+
+`RED, YELLOW, GREEN, BLUE, CYAN, MAGENTA, PURPLE, DARK RED, DARK YELLOW, WHITE, GREY`
+
+### Styles
+
+`BOLD, DIM, ITALIC, STRIPES`
+
+---
+
+## 🚀 Usage
+
+### Run the program
 
 ```bash
 go run main.go
 ```
 
-### Example flow:
+### Example
 
 ```
-⚬ Fullname: John Doe
-⚬ TEXT: Hello World
-⚬ FONT: Shadow
-⚬ COLOUR: Green
-⚬ STYLE: Bold
+Fullname: John Doe
+TEXT: Hello World
+FONT: Shadow
+COLOUR: Green
+STYLE: Bold
 ```
 
-Output:
+### Output
 
-* Styled ASCII art rendered in terminal
-* Animated transitions and progress effects
+* Styled ASCII art in terminal
+* Animated transitions
 
 ---
 
@@ -84,24 +121,24 @@ Output:
 
 ## 🎯 Purpose
 
-This project was built to strengthen understanding of:
+This project helps you practice:
 
-* Go package structuring
-* File I/O handling
-* CLI design
+* Go project structuring
+* CLI application design
+* File handling
 * String manipulation
 * ASCII rendering logic
-* Terminal UI effects using ANSI codes
+* Terminal UI with ANSI codes
 
 ---
 
 ## 🧠 Future Improvements
 
-* Add custom font uploads
-* Export ASCII output to files
-* Add GUI version (web or desktop)
-* Improve animation concurrency (goroutines)
-* Add more ASCII styles and themes
+* [ ] Custom font uploads
+* [ ] Export output to file
+* [ ] GUI version (web/desktop)
+* [ ] Improve animation with goroutines
+* [ ] More styles and themes
 
 ---
 
@@ -110,3 +147,14 @@ This project was built to strengthen understanding of:
 Built as a learning project to explore CLI design and ASCII rendering in Go.
 
 ---
+
+## 🧾 License
+
+MIT License
+
+---
+
+## 🙏 Thank You 
+
+Thanks for checking out this project!
+Feel free to ⭐ star the repo and contribute 🚀
